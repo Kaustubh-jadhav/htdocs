@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type = "text/javascript">
+// Assuming the username and password are stored in variables user and pass
+function validate(user, pass) {
+  // Using regular expressions to check the format of username and password
+  var userRegex = /^[a-zA-Z0-9_]{3,20}$/; // Username must be 3 to 20 characters long and contain only letters, numbers or underscore
+  var passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/; // Password must be at least 8 characters long and contain at least one lowercase letter, one uppercase letter and one number
+
+  // Using test() method to validate the input against the regular expressions
+  if (userRegex.test(user) && passRegex.test(pass)) {
+    return true; // Valid input
+  } else {
+    return false; // Invalid input
+  }
+}
+
+// Getting the input from the user using prompt boxes
+var username = prompt("Enter your username");
+var password = prompt("Enter your password");
+
+// Calling the validate function with the input
+var result = validate(username, password);
+
+// Displaying the result using an alert box
+if (result) {
+  alert("Your username and password are valid.");
+} else {
+  alert("Your username and password are invalid.");
+}
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

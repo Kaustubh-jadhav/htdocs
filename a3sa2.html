@@ -1,0 +1,23 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <p id="paragraph">This is a paragraph.</p>
+  <ol id="list">
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+  </ol>
+
+  <script>
+    // Using jQuery selectors to select the paragraph and the list
+    var paragraph = $("#paragraph");
+    var list = $("#list");
+
+    // Using append() method to add text to the paragraph and the list
+    paragraph.append(" This is some added text.");
+    list.append("<li>Fourth item</li>");
+  </script>
+</body>
+</html>

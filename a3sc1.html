@@ -1,0 +1,49 @@
+
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body onload="hideImage()">
+  <p>Enter your name:</p>
+  <input id="name" type="text" onblur="checkName()" onmouseup="showImage()">
+  <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/240px-JavaScript-logo.png" alt="JavaScript logo" onmouseover="enlargeImage()" onclick="hideImage()">
+
+  <script>
+    // Using jQuery selectors to select the input and the image
+    var name = $("#name");
+    var image = $("#image");
+
+    // Defining a function to hide the image
+    function hideImage() {
+      image.hide();
+    }
+
+    // Defining a function to check the name input
+    function checkName() {
+      // Getting the value of the input
+      var value = name.val();
+
+      // Checking if the value is empty or not
+      if (value == "") {
+        // If empty, do nothing
+        return;
+      } else {
+        // If not empty, change the font color and size of the input
+        name.css("color", "red");
+        name.css("font-size", "18px");
+      }
+    }
+
+    // Defining a function to show the image
+    function showImage() {
+      image.show();
+    }
+
+    // Defining a function to enlarge the image on mouseover
+    function enlargeImage() {
+      image.width(480);
+      image.height(480);
+    }
+  </script>
+</body>
+</html>

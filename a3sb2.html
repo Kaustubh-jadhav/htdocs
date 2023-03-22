@@ -1,0 +1,20 @@
+
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/240px-JavaScript-logo.png" alt="JavaScript logo">
+
+  <script>
+    // Using jQuery selector to select the image
+    var image = $("#image");
+
+    // Using before() method to insert text before the image
+    image.before("<p>This is some text before the image.</p>");
+
+    // Using after() method to insert text after the image
+    image.after("<p>This is some text after the image.</p>");
+  </script>
+</body>
+</html>
